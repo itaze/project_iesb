@@ -1,0 +1,9 @@
+# Firewall interno onde acontece o direcionamento de portas para as VMs Citrix. IP_vmMail são alias para IPs não roteáveis.
+
+pass in quick on em0 reply-to (em0 189.xx.xx.225) inet proto tcp from any to <IP_vmMail> port = smtp
+
+pass in quick on em0 reply-to (em0 189.xx.xx.225) inet proto tcp from any to <IP_vmWEB> port = http
+
+pass in quick on em1 reply-to (em1 186.xx.xx.225) inet proto tcp from any to <IP_vmMail> port = smtp
+
+pass in quick on em1 reply-to (em1 186.xx.xx.225) inet proto tcp from any to <IP_vmWEB> port = http
