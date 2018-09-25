@@ -1,2 +1,5 @@
-# project_iesb
-Projeto de segurança IESB 2018.2
+# Projeto de Seguranças IESB
+
+Firewall de borda, transparente e tratando blocos de endereçamento baseados no IANA.
+Firewall implementado no gateway
+
