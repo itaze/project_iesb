@@ -1,6 +1,6 @@
 # Firewall Packet Filter, sistema FreeBSD 11
-# root# pfctl -sr | grep "smtp\|http"
-# 2 links hospedando serviços de web e envio de e-mails. Limitando América do Sul baseado nos blocos de endereçamento distribuídos pelo IANA.
+
+# 2 links com serviços de web e envio de e-mails. Limitando América do Sul baseado nos blocos de endereçamento distribuídos pelo IANA.
 
 # Tratamento de pacotes com flags erradas
 scrub on em0 all fragment reassemble
