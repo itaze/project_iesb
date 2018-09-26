@@ -1,10 +1,10 @@
 # Projeto de Seguranças IESB
 
-# Firewall de borda, transparente e tratando blocos de endereçamento baseados no IANA.
+Firewall de borda, transparente e tratando blocos de endereçamento baseados no IANA.
 
-# Firewall implementado no gateway
+Firewall implementado no gateway
 
-# Planejamento
+Planejamento
 
 - Objetivo: Implementar firewall que trate o tráfego a nível de protocolo e aplicação.
 
