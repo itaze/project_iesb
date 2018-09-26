@@ -4,7 +4,7 @@ Firewall de borda, transparente e tratando blocos de endereçamento baseados no 
 
 Firewall implementado no gateway
 
-Planejamento
+### Planejamento
 
 - Objetivo: Implementar firewall que trate o tráfego a nível de protocolo e aplicação. Publicar serviços HTTP e SMTP, com aplicões nginx e postfix respectivamente.
 
