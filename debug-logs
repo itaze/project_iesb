@@ -1,0 +1,2 @@
+ # fail2ban controlou excesso de conexões geradas por slowhttptest
+ 1671 root      20   0 2460816  47472   6848 S   0.3  0.4 205:18.79 fail2ban-server
