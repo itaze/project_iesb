@@ -13,11 +13,11 @@ block drop out log inet all label "out_traffic"
 # Tabela dinamica criada para bloquear IPs que fazem scanner nos servicos
 block drop log quick from <scanners> to any label "block_scanners"
 
-# Permissao nas portas de servico HTTP e SMTP, 2 links distintos com in da America do Sul
+# Permissao nas portas de servico HTTP e SMTP, 2 links distintos com in da America do Sul. A configuração provisiona máximo de conexões por host.
 pass in quick on em0 inet proto tcp from <America_Sul> to <LINK1_MAIL> port = smtp flags S/SA keep state
-pass in quick on em0 inet proto tcp from <America_Sul> to <LINK2_WEB> port = http flags S/SA keep state
+pass in quick on em0 inet proto tcp from <America_Sul> to <LINK2_WEB> port = http flags S/SA keep state (source-track rule, max-src-conn 150)
 pass in quick on em1 inet proto tcp from <America_Sul> to <LINK2_MAIL> port = smtp flags S/SA keep state
-pass in quick on em1 inet proto tcp from <America_Sul> to <LINK2_WEB> port = http flags S/SA keep state
+pass in quick on em1 inet proto tcp from <America_Sul> to <LINK2_WEB> port = http flags S/SA keep state (source-track rule, max-src-conn 150)
 
 # Permissao de FTP para subir arquivos no servidor HTTP
 pass in quick on em0 inet proto tcp from <America_Sul> to <Brava_SYN> port = ftp flags S/SA keep state
